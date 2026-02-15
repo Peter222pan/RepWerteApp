@@ -1,0 +1,143 @@
+:root {
+  --bg: #f5f7fb;
+  --surface: #ffffff;
+  --text: #1a1a1a;
+  --muted: #4d5968;
+  --primary: #004f9f;
+  --primary-hover: #003b77;
+  --border: #c7d1e0;
+  --focus: #ffbf47;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  color: var(--text);
+  background: var(--bg);
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+}
+
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  background: var(--surface);
+  color: var(--text);
+  padding: 0.5rem 0.75rem;
+  border: 2px solid var(--focus);
+  z-index: 1000;
+}
+
+.site-header,
+.site-footer {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 1rem;
+}
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  border-bottom: none;
+}
+
+.container {
+  max-width: 800px;
+  margin: 1rem auto;
+  padding: 0 1rem;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.question-meta {
+  display: flex;
+  gap: 2rem;
+  margin: 0 0 1rem;
+}
+
+.question-meta dt {
+  font-weight: bold;
+}
+
+.question-meta dd {
+  margin: 0;
+  color: var(--muted);
+}
+
+.question-text {
+  font-size: 1.125rem;
+  margin: 0.5rem 0;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+textarea {
+  width: 100%;
+  font: inherit;
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+button {
+  margin-top: 0.5rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--primary);
+  border-radius: 6px;
+  background: var(--primary);
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: var(--primary-hover);
+}
+
+button:focus,
+textarea:focus,
+a:focus {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.help-text {
+  color: var(--muted);
+  margin-top: 0.5rem;
+}
+
+.feedback {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  border-left: 4px solid var(--primary);
+  background: #eef4ff;
+}
+
+.feedback:empty {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .question-meta {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
