@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Werte-Reflexion für Führungskräfte</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
+    <header class="site-header">
+      <h1>Werte-Reflexion</h1>
+      <p>
+        Wöchentliche Reflexion für Führungskräfte der Bundesverwaltung zu den
+        Werten <strong>Mut</strong>, <strong>Weitsicht</strong> und
+        <strong>Vertrauen</strong>.
+      </p>
+    </header>
+
+    <main id="main-content" class="container" tabindex="-1">
+      <section aria-labelledby="weekly-question-title" class="card">
+        <h2 id="weekly-question-title">Frage der Woche</h2>
+        <dl class="question-meta" aria-live="polite">
+          <div>
+            <dt>Woche</dt>
+            <dd id="week-label">–</dd>
+          </div>
+          <div>
+            <dt>Wert</dt>
+            <dd id="value-label">–</dd>
+          </div>
+        </dl>
+        <p id="question-text" class="question-text">Frage wird geladen…</p>
+        <p class="help-text">
+          Jeden Montag wird automatisch eine neue Reflexionsfrage erstellt.
+        </p>
+      </section>
+
+      <section aria-labelledby="reflection-title" class="card">
+        <h2 id="reflection-title">Reflexion Ende Woche</h2>
+        <form id="reflection-form" novalidate>
+          <label for="reflection-input">Ihre kurze Reflexion</label>
+          <textarea
+            id="reflection-input"
+            name="reflection"
+            rows="6"
+            required
+            minlength="20"
+            aria-describedby="reflection-hint"
+          ></textarea>
+          <p id="reflection-hint" class="help-text">
+            Schreiben Sie mindestens 20 Zeichen. Die Reflexion wird lokal in
+            Ihrem Browser gespeichert.
+          </p>
+          <button type="submit">Reflexion speichern &amp; Feedback erhalten</button>
+        </form>
+
+        <div id="feedback" class="feedback" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Einfaches, barrierearmes Prototyp-Design gemäss WCAG-Grundsätzen.</p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
